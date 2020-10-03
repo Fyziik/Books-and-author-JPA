@@ -36,9 +36,14 @@ public class LibraryController {
         System.out.println(bs.addBookToDB(book3).toString());
         System.out.println(bs.addBookToDB(book4).toString());
 
+        //A book with two authors
+        Book bookWithManyAuthors = new Book("Teamwork makes the dream work", "444444444", "idfk", author);
+        bookWithManyAuthors.addAuthorToBook(author2);
+        System.out.println(bs.addBookToDB(bookWithManyAuthors));
+
         System.out.println("--------Search by Author--------");
 
-        List<Book> books = bs.findBooksByAuthor(author);
+        List<Book> books = bs.findBooksByAuthor(author2);
         for (Book tmp : books) {
             System.out.println(tmp);
         }

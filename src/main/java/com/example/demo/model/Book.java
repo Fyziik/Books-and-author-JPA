@@ -29,6 +29,10 @@ public class Book {
         this.authors.add(author);
     }
 
+    public void addAuthorToBook(Author author) {
+        this.authors.add(author);
+    }
+
     @Override
     public String toString() {
         return "Book{" +
